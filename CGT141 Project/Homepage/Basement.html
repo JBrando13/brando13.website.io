@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Recwell Basement</title>
+    <style>
+    
+        .container { padding: 20px; color: #333; }
+        h1 { margin-top: 20px; cursor: pointer; color: #d4af37}
+        .section {
+            background-color: #fff;
+            padding: 15px;
+            border-left: 5px solid #d4af37;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+        }
+        .active {
+            max-height: 2000px;
+            transition: max-height 0.5s ease-in;
+        }
+		
+		.basementDirect{
+		height: 700px;
+		width: auto;
+		}
+		
+        body {background-color: #f5f5f5;}
+		
+		.floorMap{
+		height: 800px;
+		width: 650px;
+		}
+        .banner {
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+        } 
+    </style>    
+</head>
+    <body>
+        <div class="banner">Basement</div>
+        <div class="container">
+            <h1 onmouseover="toggleSection('Info about the first floor')">Info about the Third Floor</h1>
+                <div class="section" id="Info about the first floor">
+                    <p1> Click on the words above to drop down! <br>This floor is the main workout area.<br>
+					When you enter, the first thing you will see is the main strength training room. There is another strength training room connected to this one, with the entrance being found on the west side of the room.<br>
+					To your right will be lockers as well as a yoga and free weights room. <br>
+					To the left will be more lockers alongside the rock climbing wall.<br>
+					The entrance to the main gym can be found next to the east entrance. <br>
+					There are some multipurpose fitness rooms found on the southern edge, which are mainly used for martial arts, raquetball, and cycling.
+                    
+                    
+                    </p1>
+                </div>
+            <h1 onclick="toggleSection('Basement Map')">Basement Map</h2>
+                <img class="floorMap"src="Images/Basement.png" alt="first_floor_map">
+			<h1> Basement Directory </h2>
+				<img class="basementDirect"src="Images/basementpng.png" alt="basement_directory">
+        </div>
+        <script>
+            function toggleSection(sectionId) {
+                var section = document.getElementById(sectionId);
+                section.classList.toggle('active');
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<title>Recwell Second Floor</title>
+    <style>
+    
+        .container { padding: 20px; color: #333; }
+        h1 { margin-top: 20px; cursor: pointer; color: #e9c03a}
+        .section {
+            background-color: #fff;
+            padding: 15px;
+            border-left: 5px solid #e9c03a;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+        }
+        .active {
+            max-height: 2000px;
+            transition: max-height 0.5s ease-in;
+        }
+        body {background-color: #ffffff;}
+        .banner {
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    background-image: url('images/purdue-hero-1.jpg');
+    background-size: cover;
+    background-position: center;
+        } 
+    </style>    
+    <body>
+        <div class="banner">Second Floor</div>
+        <div class="container">
+            <h1 onmouseover="toggleSection('Equipment')">Info on second floor</h1>
+                <div class="section" id="Equipment">
+                    <p1>Hover over to expand<br>
+                      Racquetball courts 9-16 are located on this floor.<br>
+                      Administrative offices at CoRec can be found in room 2346.<br>
+                      Member's service can help you with any issue at Corec, located to the right of the floor 2 entrance.<br>
+                      The Overlook Lounge overviews the basketball court and swimming pool on floor 1, with couches and tables at room 2205. The Aquatic Mezzanine is also near there.<br>
+                      Learning to cook? head over to the Demonstration Kitchen at room 2232 to learn new healthy recipies! A juice bar is also there with delicious smoothies.<br>
+                      
+                    </p1>
+                </div>
+                <script>
+                  function toggleSection(sectionId) {
+                      var section = document.getElementById(sectionId);
+                      section.classList.toggle('active');
+                  }
+              </script>
+<h1>Map</h1>
+<img src="images/Floor 2.png" alt="floor2"
+width="700" 
+height="900">
+</body>
+</html>

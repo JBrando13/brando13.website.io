@@ -1,0 +1,62 @@
+
+<title>Recwell Fourth Floor</title>
+    <style>
+    
+        .container { padding: 20px; color: #333; }
+        h1 { margin-top: 20px; cursor: pointer; color: #d4af37}
+        .section {
+            background-color: #fff;
+            padding: 15px;
+            border-left: 5px solid #d4af37;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+        }
+        .active {
+            max-height: 2000px;
+            transition: max-height 0.5s ease-in;
+        }
+        body {background-color: #f5f5f5;}
+        .banner {
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+        } 
+		
+		.img {
+			width: 1000px;
+			height: 250px;
+		}
+		
+    </style>    
+</head>
+    <body>
+        <div class="banner">Fourth Floor</div>
+        <div class="container">
+            <h1 onmouseover="toggleSection('Info about the Fourth Floor')">Info about the Fourth Floor</h1>
+                <div class="section" id="Info about the Fourth Floor">
+                    <p1> Hover on the words above to drop down!<br>
+					<br>
+                    On the fourth floor of the Purdue RecWell center you will find a two lane track above a basketball court<br>
+                    Also on the fourth floor is an workout room for the staff at the Corec<br>
+        
+                    </p1>
+                </div>
+            <h1 onclick="toggleSection('A map of the fourth floor')">A room listings of the fourth floor</h2>
+                <img class="img" src="Images/fourth_floor_map.jpg" alt="fourth_floor_map">
+                <p2> <br> This is a room listings directory of the fourth floor, this will help you navigate the fourth floor with some ease<br> </p2>
+        </div>
+        <script>
+            function toggleSection(sectionId) {
+                var section = document.getElementById(sectionId);
+                section.classList.toggle('active');
+            }
+        </script>
+</body>

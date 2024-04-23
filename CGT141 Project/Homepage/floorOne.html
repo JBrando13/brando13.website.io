@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Recwell first floor</title>
+    <style>
+    
+        .container { padding: 20px; color: #333; }
+        h1 { margin-top: 20px; cursor: pointer; color: #d4af37}
+        .section {
+            background-color: #fff;
+            padding: 15px;
+            border-left: 5px solid #d4af37;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.2s ease-out;
+        }
+        .active {
+            max-height: 2000px;
+            transition: max-height 0.5s ease-in;
+        }
+        body {background-color: #f5f5f5;}
+        .banner {
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    background-image: url('images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+        } 
+    .image {
+        height: 500px;
+        width: auto;
+    }
+    </style>    
+</head>
+    <body>
+        <div class="banner">First Floor</div>
+        <div class="container">
+            <h1 onmouseover="toggleSection('Info about the first floor')">Info about the first floor</h1>
+                <div class="section" id="Info about the first floor">
+                    <p1> Click on the words above to drop down! <br>On this floor of the recwell building you will find numeourus gyms, lockers and even a pool.<br>
+                    With all of these faciclaties at your disposal it will be a cicnch to get ethier the work out you need or fufill your disire to have physical fun.<br>
+                    On the first floor of the Purdue RecWell center you will find multiple areas for storage lockers to help keep both your things secured and possible have a change of clothes on standby with men and women locker rooms kept seperate so you can change clothes in peace.<br>
+                    Also on the first floor is an equipment locker that the staff use  for storing equipment for events.<br>
+                    Next up on the first floor is the aquatic center or pool for year round swimming, please pay attation to the staff and check their website in advance to see if the pool is avaiable.<br>
+                    Should you become injured there is a first aid station on the first floor.<br>
+                    There are 3 gyms total on the first floor, the first being a feature gym and two gym courts for any event or workout routine you wish to try out.<br>
+                    should the need arise there is a small conferance room located in the first floor for a quick meeting or two.<br>
+                    </p1>
+                </div>
+            <h1 onclick="toggleSection('A map of the first floor')">A room listings of the first floor</h2>
+                <img class="image" src="Images/first_floor_map.png" alt="first_floor_map">
+                <p2> This is a room listings directory of the first floor, this will help you navigate the first floor with some ease and hopefully you would become lost.<br> </p2>
+        </div>
+        <script>
+            function toggleSection(sectionId) {
+                var section = document.getElementById(sectionId);
+                section.classList.toggle('active');
+            }
+        </script>
+</body>
+</html>
